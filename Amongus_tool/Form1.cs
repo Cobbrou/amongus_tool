@@ -14,7 +14,7 @@ namespace Amongus_tool
     {
         public Form1()
         {
-            InitializeComponent();
+            InitializeComponent(); //merde
         }
     }
 }
