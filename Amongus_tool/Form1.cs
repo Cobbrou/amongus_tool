@@ -16,6 +16,5 @@ namespace Amongus_tool
         {
             InitializeComponent();
         }
-
     }
 }
