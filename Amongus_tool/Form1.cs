@@ -15,6 +15,7 @@ namespace Amongus_tool
     public partial class Form1 : Form
     {
         public Mem m = new Mem();
+
         public Form1()
         {
             InitializeComponent();
@@ -43,8 +44,11 @@ namespace Amongus_tool
         private void BGWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
             if (ProcOpen)
+            {
                 ProcOpenLabel.Text = "YES";
-           ProcOpenLabel.ForeColor = Color.FromArgb(40, 193, 0); //GREEN
+                ProcOpenLabel.ForeColor = Color.FromArgb(40, 193, 0); //GREEN
+            }
+                
         }
 
         private void BGWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
@@ -52,5 +56,9 @@ namespace Amongus_tool
             BGWorker.RunWorkerAsync();
         }
 
+        private void ApplyMaxPlayers_Click(object sender, EventArgs e)
+        {
+            //m.WriteMemory("GameAssembly.dll+01C5803C,64,178,20,24,5C,34,8", "byte",MaxPlayers.Text);
+        }
     }
 }
